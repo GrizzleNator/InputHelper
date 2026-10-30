@@ -139,4 +139,20 @@ public class InputHelper {
         while (!valid);
         return user;
     }
+    public static String getRegExString(Scanner scan, String prompt, String regexPattern) {
+        String s;
+        boolean valid = false;
+        System.out.println(prompt);
+        do{
+            s = scan.nextLine();
+            if(s.matches(regexPattern)){
+                valid = true;
+            }
+            else{
+                System.out.println("your input must match the inserted pattern");
+            }
+        }
+        while(!valid);
+        return s;
+    }
 }

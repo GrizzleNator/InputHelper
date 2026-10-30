@@ -19,6 +19,10 @@ public class Main {
         } else if (!playAgain) {
             System.out.println("you are not playing again");
         }
+        String phoneNumber = InputHelper.getRegExString(scan, "Enter your phone number [xxx-xxx-xxxx]", "\\d{3}-\\d{3}-\\d{4}");
+        System.out.println("Phone number: " + phoneNumber);
+        String birthday = InputHelper.getRegExString(scan, "Enter your birthday [mm/dd/yyyy]", "\\d{2}/\\d{2}/\\d{4}");
+        System.out.println("Birthday: " + birthday);
 
 
     }
